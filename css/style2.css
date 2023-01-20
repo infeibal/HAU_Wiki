@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-image: url(../images/bg.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgb(178, 178, 250);
+    overflow-x: hidden;
+}
+
+.bg {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner {
+    width: 1920px;
+    min-height: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "left main right"
+    "footer footer footer";
+    grid-template-rows: 150px 1fr 200px;
+    grid-template-columns: 1fr 4fr 1fr; 
+}
+
+#header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 150px 120px 120px;
+}
+
+.mainheader {
+    display: grid;
+    grid-template-areas: 
+    "left right";
+    grid-template-columns: 250px 1fr;
+    column-gap: 15px;
+    min-width: 1000px;
+}
+
+.mainheader-left {
+    grid-area: left;
+    align-self: end;
+}
+
+.mainheader-right {
+    grid-area: right;
+    align-self: end;
+    padding-bottom: 18px;
+}
+
+.mainheader-right-list {
+    display: grid;
+    grid-template-areas:
+    "viki viki viki viki viki" 
+    "search characters university media community";
+    grid-template-columns: 125px 115px 105px 75px 125px;
+    grid-row-gap: 7px;
+    grid-column-gap: 20px;
+}
+
+.header-nav-link {
+    color: black;
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+.header-nav-link:hover {
+    color: rgb(75, 75, 75);
+    text-decoration: underline;
+}
+
+.header-nav {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.header-text {
+    grid-area: viki;
+    font-size: 25px;
+    text-transform: none;
+}
+
+.one-nav {
+    grid-area: search;
+}
+
+.one-nav .dropdown {
+    display: block;
+    position: relative;
+}
+
+.one-nav .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+    min-height: 30px;
+    min-width: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 3px;
+    background-color: rgb(113, 113, 223);
+}
+
+.one-nav .dropdown .dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.header-nav .dropdown .dropdownbtn {
+    color: black;
+    transition-property: color;
+    transition-duration: 0.4s;
+}
+
+.one-nav:hover .dropdown .dropdownbtn {
+    color:rgb(75, 75, 75);
+}
+
+.one-nav:hover .dropdown .dropdown-content {
+    display: block;
+}
+
+.one-nav .dropdown .dropdown-content a:hover {
+    background-color: rgb(84, 84, 167);
+}
+
+.two-nav {
+    grid-area: characters;
+}
+
+.two-nav .dropdown {
+    display: block;
+    position: relative;
+}
+
+.two-nav .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    min-width: 150px;
+    right: 0px;
+    background-color: rgb(113, 113, 223);
+    min-height: 30px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+.two-nav .dropdown .dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.two-nav .dropdown .dropdown-content a:hover {
+    background-color: rgb(84, 84, 167);
+}
+
+.two-nav:hover .dropdown .dropdown-content {
+    display: block;
+}
+
+.two-nav:hover .dropdown .dropdownbtn {
+    color: rgb(75, 75, 75);
+}
+
+.three-nav {
+    grid-area: university;
+}
+
+.three-nav .dropdown {
+    display: block;
+    position: relative;
+}
+
+.three-nav .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    min-height: 30px;
+    min-width: 150px;
+    right: 0px;
+    background-color: rgb(113, 113, 223);
+    border-radius: 3px;
+    box-shadow: 0px 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1; 
+}
+
+.three-nav .dropdown .dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.three-nav .dropdown .dropdown-content a:hover {
+    background-color: rgb(84, 84, 167);
+}
+
+.three-nav:hover .dropdown .dropdownbtn {
+    color: rgb(75, 75, 75);
+}
+
+.three-nav:hover .dropdown .dropdown-content {
+    display: block;
+}
+
+.four-nav {
+    grid-area: media;
+}
+
+.four-nav .dropdown {
+    display: block;
+    position: relative;
+}
+
+.four-nav .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    min-height: 30px;
+    min-width: 120px;
+    right: 0px;
+    background-color: rgb(113, 113, 223);
+    border-radius: 3px;
+    box-shadow: 0px 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1; 
+}
+
+.four-nav .dropdown .dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.four-nav .dropdown .dropdown-content a:hover {
+    background-color: rgb(84, 84, 167);
+}
+
+.four-nav:hover .dropdown .dropdownbtn {
+    color: rgb(75, 75, 75);
+}
+
+.four-nav:hover .dropdown .dropdown-content {
+    display: block;
+}
+
+.five-nav {
+    grid-area: community;
+}
+
+.five-nav .dropdown {
+    display: block;
+    position: relative;
+}
+
+.five-nav .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    min-height: 30px;
+    min-width: 130px;
+    right: 7px;
+    background-color: rgb(113, 113, 223);
+    border-radius: 3px;
+    box-shadow: 0px 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1; 
+}
+
+.five-nav .dropdown .dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.five-nav .dropdown .dropdown-content a:hover {
+    background-color: rgb(84, 84, 167);
+}
+
+.five-nav:hover .dropdown .dropdownbtn {
+    color: rgb(75, 75, 75);
+}
+
+.five-nav:hover .dropdown .dropdown-content {
+    display: block;
+}
+
+.header-nav .dropdown .dropdown-content a {
+    text-transform: none;
+}
+
+.header-nav .dropdown .dropdownbtn::after {
+    content: " ▾";
+}
+
+.header-nav:hover .dropdown .dropdownbtn::after {
+    content: " ▴";
+}
+
+.hau-header-icon {
+    width: 250px;
+    display: block;
+    position: relative;
+    top: 10px;
+    transition-duration: 0.2s;
+}
+
+.hau-header-icon:hover {
+    width: 255px;
+    top: 9px;
+}
+
+.leftheader, .rightheader {
+    background-color: rgba(0, 0, 0, 0,);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#sitebar-left {
+    grid-area: left;
+    background-color: rgba(0, 0, 0, 0,);
+}
+
+#sitebar-right {
+    grid-area: right;
+    background-color: rgba(0, 0, 0, 0,);
+}
+
+#main {
+    box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);
+    grid-area: main;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 6px;
+    padding: 30px;
+    min-width: 1000px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "header1"
+    "content";
+    grid-template-rows: 70px 1fr;
+}
+
+
+.main .main-header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    grid-area: header1;
+    align-items: end;
+    display: flex;
+    align-items: end;
+    font-size: 18px;
+    letter-spacing: 0.1px;
+    color: #3a3a3a;
+}
+
+.main .main-header h1 {
+    display: block;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: rgba(0,0,0,0);
+    margin-top: 40px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.footer-text {
+    display: block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+}
+
+.footer-text .text {
+    color: rgba(0,0,0,0.3);
+}
