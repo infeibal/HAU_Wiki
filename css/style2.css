@@ -22,6 +22,7 @@ body {
 .conteiner {
     width: 1920px;
     min-height: 1000px;
+    max-height: 1000px;
     margin: 0 auto;
     display: grid;
     grid-template-areas: 
